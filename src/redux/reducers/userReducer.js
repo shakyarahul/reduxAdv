@@ -1,4 +1,4 @@
-import {FETCH_DATA,REMOVE_DATA, SIGNUP_DATA, FETCH_DATA_FROM_KEY, ERROR_DATA, LOGIN_DATA, LOADING_DATA} from '../actions/types'
+import {FETCH_DATA,REMOVE_DATA, SIGNUP_DATA, FETCH_DATA_FROM_KEY, ERROR_DATA, LOGIN_DATA_I, LOADING_DATA} from '../actions/types'
 const initialState = {
     user:false,
     title:"Users",
@@ -30,10 +30,11 @@ const initialState = {
 export const userReducer = (state = initialState, action) => {
     switch(action.type){
         
-        case LOGIN_DATA:
+        case LOGIN_DATA_I:
+            
             return {
                 ...state,
-                accessKey: action.payload.data,
+                accessKey: action.payload.access_token,
                 loading:false
             }
         case LOADING_DATA:

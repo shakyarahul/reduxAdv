@@ -1,7 +1,7 @@
 import React from 'react'
 import { View, Text , TextInput, Button} from 'react-native'
 import { connect } from 'react-redux';
-import * as userActions from '../redux/actions/userActions'
+import {loginDatas} from '../redux/actions/userActions'
 
 class Home extends React.Component{
     constructor(){
@@ -46,10 +46,10 @@ const mapStateToProps = (state) => {
         return{
             accessKey: state.users.accessKey,
         }
-    };
-const mapDispatchToProps = dispatch => {
-        return {
-            loginDatas: (credentials) => dispatch(userActions.loginDatas(credentials)),
+    }
+const mapDispatchToProps = (dispatch) => {
+        return{
+            loginDatas: (credentials) => dispatch(loginDatas(credentials)),
         }
     }
 export default connect(mapStateToProps,mapDispatchToProps)(Home);
