@@ -1,8 +1,11 @@
 export const HOST = 'http://kusumshakya.com.np/earnupv1/'
 export const LOGIN_DATA = 'LOGIN_DATA'
 export const LOGIN_DATA_I = 'LOGIN_DATA_I'
-
+export const LOADING_DATA_I = 'LOADING_DATA_I'
 export const FETCH_DATA = 'FETCH_DATA'
+export const FETCH_DATA_I = 'FETCH_DATA_I'
+export const FETCH_USER_DATA = 'FETCH_USER_DATA'
+export const FETCH_USER_DATA_I = 'FETCH_USER_DATA_I'
 export const ERROR_DATA = 'ERROR_DATA'
 export const FETCH_DATA_FROM_KEY = 'FETCH_DATA_FROM_KEY'
 export const LOADING_DATA = 'LOADING_DATA'
